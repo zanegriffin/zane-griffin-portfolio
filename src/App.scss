@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@400;700&display=swap');
+$montserrat: 'Montserrat', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$blue-crayola: #3772ffff;
+$fuchsia: #f038ffff;
+$cyclamen: #ef709dff;
+$gold-yellow: rgb(214, 205, 81);
+$electric-blue: #70e4efff;
+$cosmic-latte: #fff4e4;
+$mauve: #EDC9FF;
+$mint-green: #9bff99;
+
+.App{
+    .landing{
+        height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $cyclamen;
+        .sideblock{
+            height: 70vh;
+            width: 40%;
+            background-color: $gold-yellow;
+            position: absolute;
+            
+        }
+        .main-content{
+            z-index: 2;
+            margin: auto 0;
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .name-block{
+                background-color: $blue-crayola;
+                color: $electric-blue;
+                font-family: $raleway;
+                font-weight: bold;
+                margin-left: 15%;
+                padding: 20px 30px;
+                padding-right: 0;
+                margin-top: 10px;
+                h1{
+                    font-size: 30px;
+                    margin: 0;
+                }
+                p{
+                    font-size: 18px;
+                    display: flex;
+                    margin: 0;
+    
+                }
+            }
+            .arrows{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                margin-right: 18%;
+                .icons{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100px;
+                    svg{
+                        margin: 5px;
+                        font-size: 60px;
+                        color: $electric-blue;
+                        &:first-of-type{
+                            animation: color-shift 3s ease-in-out infinite alternate;
+                        }
+                        &:nth-of-type(2){
+                            animation: color-shift 3s ease-in-out 1s infinite alternate;
+                        }
+                        &:last-of-type{
+                            animation: color-shift 3s ease-in-out 2s infinite alternate;
+                        }
+                    }
+                }
+                a{
+                    font-family: $raleway;
+                    font-weight: bold;
+                    font-size: 18px;
+                    background-color: $mauve;
+                    color: $blue-crayola;
+                    text-align: center;
+                    width: 100px;
+                    padding: 10px 0;
+                }
+            }
+        }
+        .spinner-container{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            transition: translate ease;
+            .spinner{
+                height: 90px;
+                width: 90px;
+                background-color: $mint-green;
+                border-radius: 20px;
+                &:first-of-type{
+                    position: absolute;
+                    right: 10%;
+                    top: 5%;
+                    animation: spin 3s linear infinite;
+                }
+                &:nth-of-type(2){
+                    position: absolute;
+                    left: 6%;
+                    top: 52%;
+                    animation: spin 3s linear infinite reverse;
+                }
+                &:last-of-type{
+                    position: absolute;
+                    bottom: 5%;
+                    right: 25%;
+                    animation: spin 3s linear infinite;
+                }
+                
+            }
+        }
+        
+    }
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes color-shift {
+    0% {
+        color: $electric-blue;
+    }
+    33%{
+        color: $cosmic-latte;
+    }
+}
