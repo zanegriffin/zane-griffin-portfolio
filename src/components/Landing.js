@@ -4,7 +4,12 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faChevronCircleDown} from '@fortawesome/free-solid-svg-icons'
 import './style/Landing.scss'
 
-const Landing = () => {
+const Landing = (props) => {
+
+    const handleClick = () => {
+        props.history.push('/profile')
+    }
+
     return(
         <div className='landing'>
             <div className='spinner-container'>
@@ -38,7 +43,7 @@ const Landing = () => {
                     <FontAwesomeIcon icon={faChevronCircleDown}  />
                     <FontAwesomeIcon icon={faChevronCircleDown}  />
                    </div>
-                    <a>click here</a>
+                    <a onClick={() => handleClick()} >click here</a>
                 </div>
             </div>
         </div>

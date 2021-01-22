@@ -1,15 +1,27 @@
 import './App.scss';
 import React from 'react'
 import {Switch, Route} from 'react-router-dom'
-import {CSSTransitionGroup} from 'react-transition-group'
+import {CSSTransition, TransitionGroup} from 'react-transition-group'
 import Landing from './components/Landing'
+import Profile from './components/Profile'
 
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Route exact path='/' render={() => <Landing/>} />
-      </Switch>
+      <Route render={({location}) => (
+        <TransitionGroup>
+        <CSSTransition
+        key={location.key}
+        timeout={1000}
+        classNames='swap'
+        >
+          <Switch location={location}>
+            <Route exact path='/' render={(rp) => <Landing {...rp}/>} />
+            <Route  path='/profile' render={(rp) => <Profile {...rp} />} />
+          </Switch>
+        </CSSTransition>
+      </TransitionGroup>
+      )} />
     </div>
   );
 }
