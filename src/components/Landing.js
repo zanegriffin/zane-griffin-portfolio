@@ -2,14 +2,24 @@ import React from 'react'
 import Typewriter from 'typewriter-effect'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faChevronCircleDown} from '@fortawesome/free-solid-svg-icons'
+import './style/Landing.scss'
 
 const Landing = () => {
     return(
         <div className='landing'>
             <div className='spinner-container'>
-                <div className='spinner'></div>
-                <div className='spinner'></div>
-                <div className='spinner'></div>
+                <div className='spinner-slide'>
+                    <div className='spinner-shadow'></div>
+                    <div className='spinner'></div>
+                </div>
+                <div className='spinner-slide'>
+                    <div className='spinner-shadow'></div>
+                    <div className='spinner'></div>
+                </div>
+                <div className='spinner-slide'>
+                    <div className='spinner-shadow'></div>
+                    <div className='spinner'></div>
+                </div>
             </div>
             <div className='sideblock'></div>
             <div className='main-content'>
