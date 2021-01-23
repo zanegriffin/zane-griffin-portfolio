@@ -24,6 +24,7 @@ $eggplant: rgb(73, 3, 73);
         background-color: $gold-yellow;
         position: absolute;
         box-shadow: -15px 15px goldenrod;
+        animation: 1s ease-out 0s 1 slideInFromLeft;
     }
     .main-content{
         z-index: 2;
@@ -32,6 +33,7 @@ $eggplant: rgb(73, 3, 73);
         display: flex;
         flex-direction: column;
         justify-content: center;
+        animation: 1s ease-out 0s 1 slideInFromLeft;
         .name-block{
             background-color: $blue-crayola;
             color: $electric-blue;
@@ -126,6 +128,7 @@ $eggplant: rgb(73, 3, 73);
         width: 100%;
         z-index: 1;
         transition: translate 0.4s ease;
+        animation: 1s ease-out 0s 1 slideInFromBottom;
         .spinner-slide{
             position: relative;
             &:first-of-type{
@@ -236,5 +239,23 @@ $eggplant: rgb(73, 3, 73);
     33%{
         color: $cosmic-latte;
         
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
     }
 }

@@ -11,32 +11,14 @@ $mauve: #EDC9FF;
 $mint-green: #9bff99;
 
 
-// Transition CSS
-.swap-appear, .swap-enter{
-    opacity: 0;
-    // transform: rotateY(90deg);
-    transform: translateX(5000px);
-    z-index: 1;
-}
-
-.swap-appear-active,
-.swap-enter.swap-enter-active{
-    opacity: 1;
-    transform: translateX(0px);
-    // transform: rotateY(0deg);
-    transition: 0.5s;
-}
-
-// .swap-exit{
-//     // opacity: 1;
-//     transform: translateX(0px);
-// }
-// .swap-exit.swap-exit-active{
-//     transition: 0.5s;
-//     // opacity:0;
-//     transform: translateX(-5000px)
-// }
-
 .App{
-    background-color: orange;
+    background-color: black;
+}
+
+.exit-animation{
+
+}
+
+@keyframes exit {
+    
 }

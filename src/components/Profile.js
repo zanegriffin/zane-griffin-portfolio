@@ -1,10 +1,15 @@
 import React from 'react'
+import About from './About'
+import Contact from './Contact'
+import Header from './Header'
 import './style/Profile.scss'
 
 const Profile = () => {
     return(
         <div className='profile'>
-            <h1>NEXT PAGE</h1>
+            <Header/>
+            <About/>
+            <Contact/>
         </div>
     )
 }
