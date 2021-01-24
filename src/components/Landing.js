@@ -7,7 +7,11 @@ import './style/Landing.scss'
 const Landing = (props) => {
 
     const handleClick = () => {
-        props.history.push('/profile')
+        const landing = document.querySelector('.landing')
+        landing.classList.add('exit')
+        setTimeout(() => {
+            props.history.push('/profile')
+        }, 1000);
     }
 
     return(

@@ -12,13 +12,51 @@ $mint-green: #9bff99;
 
 
 .App{
-    background-color: black;
+    background-color: $cyclamen;
 }
 
-.exit-animation{
 
+.cursor {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fefefe;
+    border-radius: 100%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
 }
 
-@keyframes exit {
-    
+html, body {
+  // cursor: none;
+  background-color: $cyclamen;
+}
+.exit{
+    animation: exit-down 1500ms ease;
+}
+
+.entry{
+    animation: 500ms linear 0s 1 slideInFromLeft;
+}
+
+@keyframes exit-down{
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+        transition: opacity 1s ease;
+    }
+    100%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
 }
