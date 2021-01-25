@@ -1,5 +1,6 @@
 import React from 'react'
 import './style/Header.scss'
+import {Navbar, Nav, NavDropdown} from 'react-bootstrap'
 
 const Header = (props) => {
 
@@ -58,7 +59,12 @@ const Header = (props) => {
                 </ul>
             </div>
             <div className='mobile'>
-
+                <ul>
+                    <li onClick={() => toHome()}>Home</li>
+                    <li onClick={() => toAbout()}>About</li>
+                    <li onClick={() => toPortfolio()}>Portfolio</li>
+                    <li onClick={() => toContact()}>Contact</li>
+                </ul>
             </div>
         </div>
     )

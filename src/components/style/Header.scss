@@ -1,3 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@400;700&display=swap');
+$montserrat: 'Montserrat', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$blue-crayola: #3772ffff;
+$fuchsia: #f038ffff;
+$cyclamen: #ef709dff;
+$gold-yellow: rgb(214, 205, 81);
+$electric-blue: #70e4efff;
+$cosmic-latte: #fff4e4;
+$mauve: #EDC9FF;
+$mint-green: #9bff99;
+$shadow: rgba(41, 41, 41, 0.5);
+$eggplant: rgb(73, 3, 73);
 .header{
-    padding: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: $electric-blue;
+    h1{
+        margin-top: 30px;
+        margin-left: 30%;
+        padding: 5px;
+        background-color: $blue-crayola;
+        box-shadow: 10px 10px 0 0 blue;
+        font-family: $montserrat;
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+    .mobile{
+        
+        @media (min-width: 1024px) {
+            display: none
+        }
+        width: 100%;
+        ul{
+            margin: 0;
+            margin-top: 5px;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            li{
+                width: 75px;
+                padding: 5px;
+                list-style-type: none;
+                text-align: center;
+                background-color: $mauve;
+                color: $blue-crayola;
+                margin-bottom: 5px;
+                box-shadow: 5px 5px $eggplant;
+                &:first-of-type{
+                    margin-right: 1%;
+                }
+                &:nth-of-type(2){
+                    margin-right: 4%;
+                }
+                &:nth-of-type(3){
+                    margin-right: 1%;
+                }
+                &:nth-of-type(4){
+                    margin-right: 4%;
+                }
+            }
+        }
+    }
+    .links{
+        display: none;
+        @media (min-width: 1024px) {
+            display: block;
+            
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            li{
+                list-style-type: none;
+                padding: 5px;
+                font-family: $montserrat;
+                text-transform: uppercase;
+            }
+        }
+    }
 }
