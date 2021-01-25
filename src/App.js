@@ -8,13 +8,12 @@ import Profile from './components/Profile'
 function App() {
 
  const [currentPage, setCurrentPage] = useState('.landing') 
- 
-
+console.log(currentPage)
   return (
     <div className="App" onbeforeunload="HandleBackFunctionality()">
           <Switch>
-            <Route exact path='/' render={(rp) => <Landing {...rp}/>} />
-            <Route  path='/profile' render={(rp) => <Profile {...rp} currentPage={currentPage} setCurrentPage={setCurrentPage} />} />
+            <Route exact path='/' render={(rp) => <Landing {...rp} setCurrentPage={setCurrentPage}/>} />
+            <Route path='/profile' render={(rp) => <Profile {...rp} currentPage={currentPage} setCurrentPage={setCurrentPage} />} />
           </Switch>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Typewriter from 'typewriter-effect'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faChevronCircleDown} from '@fortawesome/free-solid-svg-icons'
@@ -6,11 +6,19 @@ import './style/Landing.scss'
 
 const Landing = (props) => {
 
+    useEffect(() => {
+         settingState()
+    }, [])
+
+    const settingState = () => {
+        props.setCurrentPage('.landing')
+    }
+
     const handleClick = () => {
         const landing = document.querySelector('.landing')
         landing.classList.add('exit')
         setTimeout(() => {
-            props.history.push('/profile')
+            props.history.push('/profile/about')
         }, 1000);
     }
 

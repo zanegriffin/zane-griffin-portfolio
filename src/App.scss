@@ -37,7 +37,7 @@ html, body {
 }
 
 .entry{
-    animation: 500ms linear 0s 1 slideInFromLeft;
+    animation: slide-in-from-left 500ms linear ;
 }
 
 @keyframes exit-down{
@@ -47,12 +47,12 @@ html, body {
         transition: opacity 1s ease;
     }
     100%{
-        transform: translateY(-100%);
+        transform: translateY(100%);
         opacity: 0;
     }
 }
 
-@keyframes slideInFromLeft {
+@keyframes slide-in-from-left {
     0% {
       transform: translateX(-100%);
     }

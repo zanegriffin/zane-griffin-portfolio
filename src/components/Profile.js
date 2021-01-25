@@ -10,11 +10,11 @@ import './style/Profile.scss'
 const Profile = (props) => {
     return(
         <div className='profile entry'>
-            <Header currentPage={props.currentPage} setCurrentPage={props.setCurrentPage} />
+            <Header {...props} currentPage={props.currentPage} setCurrentPage={props.setCurrentPage} />
             <Switch>
-                <Route exact path='profile/about' render={() => <About />} />
-                <Route exact path='profile/portfolio' render={() => <Portfolio />} />
-                <Route exact path='profile/contact' render={() => <Contact />} />
+                <Route exact path='/profile/about' render={() => <About setCurrentPage={props.setCurrentPage} />} />
+                <Route exact path='/profile/portfolio' render={() => <Portfolio setCurrentPage={props.setCurrentPage} />} />
+                <Route exact path='/profile/contact' render={() => <Contact  setCurrentPage={props.setCurrentPage} />} />
             </Switch>
         </div>
     )

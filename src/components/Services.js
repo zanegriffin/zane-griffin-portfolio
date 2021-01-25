@@ -1,9 +1,15 @@
-import React from 'react'
+import React, {useEffect}  from 'react'
 
 const Services = (props) => {
-    
+    useEffect(() => {
+        settingState()
+   }, [])
+
+   const settingState = () => {
+       props.setCurrentPage('.services')
+   }
     return(
-        <div className='services'>
+        <div className='services entry'>
             <div className='links'>
                 
             </div>

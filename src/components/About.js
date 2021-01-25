@@ -1,12 +1,16 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 const About = (props) => {
-    
+    useEffect(() => {
+        settingState()
+   }, [])
+
+   const settingState = () => {
+       props.setCurrentPage('.about')
+   }
     return(
-        <div className='about'>
-            <div className='links'>
-                
-            </div>
+        <div className='about entry'>
+            <h1>Hello</h1>
         </div>
     )
 }
