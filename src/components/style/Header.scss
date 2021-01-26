@@ -33,34 +33,54 @@ $eggplant: rgb(73, 3, 73);
             display: none
         }
         width: 100%;
+        transition: 1s ease;
+        display: flex;
+        flex-direction: column;
+        .mobile-nav-icon{
+            align-self: flex-end;
+            svg{
+                margin-top: 20px;
+                font-size: 40px;
+                padding-left: 5px;
+                transition: 0.5s ease;
+                &:nth-of-type(2){
+                    transition-delay: 0.1s;
+                }
+                &:nth-of-type(3){
+                    transition-delay: 0.2s;
+                }
+            }
+        }
         ul{
             margin: 0;
             margin-top: 5px;
             padding: 0;
-            width: 100%;
+            width: 0px;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            position: absolute;
+            right: 10px;
             li{
+                transition: 1s ease;
                 width: 75px;
-                padding: 5px;
+                padding: 10px;
                 list-style-type: none;
                 text-align: center;
                 background-color: $mauve;
                 color: $blue-crayola;
                 margin-bottom: 5px;
                 box-shadow: 5px 5px $eggplant;
-                &:first-of-type{
-                    margin-right: 1%;
-                }
+                font-size: 20px;
+                z-index: 1;
                 &:nth-of-type(2){
-                    margin-right: 4%;
+                    transition-delay: 0.2s;
                 }
                 &:nth-of-type(3){
-                    margin-right: 1%;
+                    transition-delay: 0.4s;
                 }
                 &:nth-of-type(4){
-                    margin-right: 4%;
+                    transition-delay: 0.6s;
                 }
             }
         }

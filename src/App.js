@@ -8,7 +8,7 @@ import Profile from './components/Profile'
 function App() {
 
  const [currentPage, setCurrentPage] = useState('.landing') 
-console.log(currentPage)
+
   return (
     <div className="App" onbeforeunload="HandleBackFunctionality()">
           <Switch>
