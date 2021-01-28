@@ -52,24 +52,31 @@ const About = (props) => {
             <div className='skills'>
                 <div>
                     <FontAwesomeIcon icon={faHtml5} />
+                    <p>HTML5</p>
                 </div>
                 <div>
                     <FontAwesomeIcon icon={faCss3} />
+                    <p>CSS3</p>
                 </div>
                 <div>
                     <FontAwesomeIcon icon={faJsSquare} />
+                    <p>JavaScript</p>
                 </div>
                 <div>
                     <FontAwesomeIcon icon={faNodeJs} />
+                    <p>Node.js</p>
                 </div>
                 <div>
                     <FontAwesomeIcon icon={faBootstrap} />
+                    <p>Bootstrap</p>
                 </div>
                 <div>
                     <FontAwesomeIcon icon={faReact} />
+                    <p>React</p>
                 </div>
                 <div>
                     <FontAwesomeIcon icon={faFigma} />
+                    <p>Figma</p>
                 </div>
             </div>
         </div>
