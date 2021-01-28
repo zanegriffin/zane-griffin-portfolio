@@ -1,3 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@400;700&display=swap');
+$montserrat: 'Montserrat', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$blue-crayola: #3772ffff;
+$cyclamen: #ef709dff;
+$gold-yellow: rgb(214, 205, 81);
+$electric-blue: #70e4efff;
+$cosmic-latte: #fff4e4;
+$mauve: #EDC9FF;
+$mint-green: #9bff99;
+$green: #4ec54c;
+$dark-green: #093b08;
+$shadow: rgba(41, 41, 41, 0.5);
+$purple: rgb(139, 28, 139);
+$eggplant: rgb(73, 3, 73);
+$turquiose: #00ffbf;
 .about{
-    
+    margin-top: 40px;
+    .features{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div{
+            // border-radius: 15px;
+            width: 60vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: $electric-blue;
+            background: $blue-crayola;
+            box-shadow: 15px 15px blue;
+            &:nth-of-type(2){
+                color: $mauve;
+                background: $purple;
+                box-shadow: 15px 15px $eggplant;
+            }
+            &:nth-of-type(3){
+                color: $mint-green;
+                background: $green;
+                box-shadow: 15px 15px $dark-green;
+            }
+            svg{
+                font-size: 80px;
+                margin-bottom: 10px;
+            }
+            h1{
+                font-family: $raleway;
+                font-size: 24px;
+                padding: 5px;
+            }
+            p{
+                font-family: $montserrat;
+                margin: 0;
+            }
+        }
+    }
 }
+

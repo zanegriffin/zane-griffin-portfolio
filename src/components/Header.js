@@ -1,13 +1,13 @@
 import React, {useState} from 'react'
 import './style/Header.scss'
-import {faChevronCircleRight} from '@fortawesome/free-solid-svg-icons'
+import {faCaretRight} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const Header = (props) => {
     // Mobile Nav Logic
     const [visible, setVisible] = useState(true)
     const mauve = '#EDC9FF'
-    const blue = '#70e4efff'
+    const blue = '#00ffbf'
 
     const [mobileNavStyle, setMobileNavStyle] = useState({
         transform: 'translateX(200%)',
@@ -116,9 +116,9 @@ const Header = (props) => {
                 </div>
                 <div className='mobile'>
                     <div className='mobile-nav-icon'>
-                        <FontAwesomeIcon icon={faChevronCircleRight} style={iconStyle} onClick={handleNavAnimationClick}/>
-                        <FontAwesomeIcon icon={faChevronCircleRight} style={iconStyle} onClick={handleNavAnimationClick}/>
-                        <FontAwesomeIcon icon={faChevronCircleRight} style={iconStyle} onClick={handleNavAnimationClick}/>
+                        <FontAwesomeIcon icon={faCaretRight} style={iconStyle} onClick={handleNavAnimationClick}/>
+                        <FontAwesomeIcon icon={faCaretRight} style={iconStyle} onClick={handleNavAnimationClick}/>
+                        <FontAwesomeIcon icon={faCaretRight} style={iconStyle} onClick={handleNavAnimationClick}/>
                     </div>
                     <ul>
                         <li onClick={() => toHome()} style={mobileNavStyle}>Home</li>
