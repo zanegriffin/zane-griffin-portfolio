@@ -16,13 +16,13 @@ $eggplant: rgb(73, 3, 73);
 }
 .landing::-webkit-scrollbar {
     display: none;
-  }
+}
   
   /* Hide scrollbar for IE, Edge and Firefox */
-  .landing {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+.landing {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 .landing{
     height: 100vh;
     position: relative;

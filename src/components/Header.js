@@ -46,10 +46,13 @@ const Header = (props) => {
 
     // Nav Link Destinations/Logic
     const toHome = () => {
-        console.log('click')
+        
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         const page = document.querySelector('.profile')
         page.classList.remove('entry')
         page.classList.add('exit')
+        
         setTimeout(() => {
             props.history.push('/')
         }, 1000);
@@ -59,6 +62,8 @@ const Header = (props) => {
             return
         }
         handleNavAnimationClick()
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         const page = document.querySelector(props.currentPage)
         page.classList.remove('entry')
         page.classList.add('exit')
@@ -71,6 +76,8 @@ const Header = (props) => {
             return
         }
         handleNavAnimationClick()
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         const page = document.querySelector(props.currentPage)
         console.log('page', page, props.currentPage)
         page.classList.remove('entry')
@@ -84,6 +91,8 @@ const Header = (props) => {
             return
         }
         handleNavAnimationClick()
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         const page = document.querySelector(props.currentPage)
         page.classList.remove('entry')
         page.classList.add('exit')
@@ -95,27 +104,29 @@ const Header = (props) => {
         //HTML 
     return(
         <div className='header'>
-            <h1>Zane Griffin</h1>
-            <div className='links'>
-                <ul>
-                    <li onClick={() => toHome()}>Home</li>
-                    <li onClick={() => toAbout()}>About</li>
-                    <li onClick={() => toPortfolio()}>Portfolio</li>
-                    <li onClick={() => toContact()}>Contact</li>
-                </ul>
-            </div>
-            <div className='mobile'>
-                <div className='mobile-nav-icon'>
-                    <FontAwesomeIcon icon={faChevronCircleRight} style={iconStyle} onClick={handleNavAnimationClick}/>
-                    <FontAwesomeIcon icon={faChevronCircleRight} style={iconStyle} onClick={handleNavAnimationClick}/>
-                    <FontAwesomeIcon icon={faChevronCircleRight} style={iconStyle} onClick={handleNavAnimationClick}/>
+            <div className='fixed-top'>
+                <h1>Zane Griffin</h1>
+                <div className='links'>
+                    <ul>
+                        <li onClick={() => toHome()}>Home</li>
+                        <li onClick={() => toAbout()}>About</li>
+                        <li onClick={() => toPortfolio()}>Portfolio</li>
+                        <li onClick={() => toContact()}>Contact</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li onClick={() => toHome()} style={mobileNavStyle}>Home</li>
-                    <li onClick={() => toAbout()} style={{transitionDelay: '0.2s'}} style={mobileNavStyle}>About</li>
-                    <li onClick={() => toPortfolio()} style={{transitionDelay: '0.4s'}} style={mobileNavStyle}>Portfolio</li>
-                    <li onClick={() => toContact()} style={{transitionDelay: '0.6s'}} style={mobileNavStyle}>Contact</li>
-                </ul>
+                <div className='mobile'>
+                    <div className='mobile-nav-icon'>
+                        <FontAwesomeIcon icon={faChevronCircleRight} style={iconStyle} onClick={handleNavAnimationClick}/>
+                        <FontAwesomeIcon icon={faChevronCircleRight} style={iconStyle} onClick={handleNavAnimationClick}/>
+                        <FontAwesomeIcon icon={faChevronCircleRight} style={iconStyle} onClick={handleNavAnimationClick}/>
+                    </div>
+                    <ul>
+                        <li onClick={() => toHome()} style={mobileNavStyle}>Home</li>
+                        <li onClick={() => toAbout()} style={{transitionDelay: '0.2s'}} style={mobileNavStyle}>About</li>
+                        <li onClick={() => toPortfolio()} style={{transitionDelay: '0.4s'}} style={mobileNavStyle}>Portfolio</li>
+                        <li onClick={() => toContact()} style={{transitionDelay: '0.6s'}} style={mobileNavStyle}>Contact</li>
+                    </ul>
+                </div>
             </div>
         </div>
     )

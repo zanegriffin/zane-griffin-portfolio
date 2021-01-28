@@ -12,94 +12,107 @@ $mint-green: #9bff99;
 $shadow: rgba(41, 41, 41, 0.5);
 $eggplant: rgb(73, 3, 73);
 .header{
-    padding: 10px;
+    
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     color: $electric-blue;
-    h1{
-        margin-top: 30px;
-        margin-left: 30%;
-        padding: 5px;
-        background-color: $blue-crayola;
-        box-shadow: 10px 10px 0 0 blue;
-        font-family: $montserrat;
-        text-transform: uppercase;
-        font-size: 24px;
-    }
-    .mobile{
-        
-        @media (min-width: 1024px) {
-            display: none
-        }
+    height: 120px;
+    .fixed-top{
         width: 100%;
-        transition: 1s ease;
-        display: flex;
-        flex-direction: column;
-        .mobile-nav-icon{
-            align-self: flex-end;
-            svg{
-                margin-top: 20px;
-                font-size: 40px;
-                padding-left: 5px;
-                transition: 0.5s ease;
-                &:nth-of-type(2){
-                    transition-delay: 0.1s;
-                }
-                &:nth-of-type(3){
-                    transition-delay: 0.2s;
-                }
-            }
-        }
-        ul{
-            margin: 0;
-            margin-top: 5px;
-            padding: 0;
-            width: 0px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            position: absolute;
-            right: 10px;
-            li{
-                transition: 1s ease;
-                width: 75px;
-                padding: 10px;
-                list-style-type: none;
-                text-align: center;
-                background-color: $mauve;
-                color: $blue-crayola;
-                margin-bottom: 5px;
-                box-shadow: 5px 5px $eggplant;
-                font-size: 20px;
-                z-index: 1;
-                &:nth-of-type(2){
-                    transition-delay: 0.2s;
-                }
-                &:nth-of-type(3){
-                    transition-delay: 0.4s;
-                }
-                &:nth-of-type(4){
-                    transition-delay: 0.6s;
-                }
-            }
-        }
-    }
-    .links{
-        display: none;
-        @media (min-width: 1024px) {
-            display: block;
+        position: fixed;
+        background-image: linear-gradient($shadow, rgba(41, 41, 41, 0));
+        h1{
+            margin-top: 20px;
+            margin-left: 30%;
+            padding: 5px;
+            background-color: $blue-crayola;
+            box-shadow: 10px 10px 0 0 blue;
+            font-family: $montserrat;
+            text-transform: uppercase;
+            font-size: 24px;
+            text-align: center;
             
         }
-        ul{
-            margin: 0;
-            padding: 0;
+        .mobile{
+            
+            @media (min-width: 1024px) {
+                display: none
+            }
+            width: 100%;
+            transition: 1s ease;
             display: flex;
-            li{
-                list-style-type: none;
-                padding: 5px;
-                font-family: $montserrat;
-                text-transform: uppercase;
+            flex-direction: column;
+            .mobile-nav-icon{
+                align-self: flex-end;
+                margin-right: 5px;
+                svg{
+                    margin-top: 20px;
+                    font-size: 40px;
+                    padding-left: 5px;
+                    transition: 0.5s ease;
+                    &:nth-of-type(2){
+                        transition-delay: 0.1s;
+                    }
+                    &:nth-of-type(3){
+                        transition-delay: 0.2s;
+                    }
+                }
+            }
+            ul{
+                margin: 0;
+                margin-top: 75px;
+                padding: 0;
+                width: 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                position: absolute;
+                right: 10px;
+                li{
+                    transition: 1s ease;
+                    width: 140px;
+                    padding: 10px;
+                    list-style-type: none;
+                    text-align: center;
+                    background-color: $mauve;
+                    color: $blue-crayola;
+                    margin-bottom: 5px;
+                    box-shadow: 5px 5px $eggplant;
+                    font-size: 20px;
+                    font-weight: bold;
+                    font-family: $raleway;
+                    text-transform: uppercase;
+                    z-index: 1;
+                    &:nth-of-type(2){
+                        transition-delay: 0.2s;
+                        
+                    }
+                    &:nth-of-type(3){
+                        transition-delay: 0.4s;
+                    }
+                    &:nth-of-type(4){
+                        transition-delay: 0.6s;
+                    }
+                }
+            }
+        }
+        .links{
+            display: none;
+            @media (min-width: 1024px) {
+                display: block;
+                
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                li{
+                    list-style-type: none;
+                    padding: 5px;
+                    font-family: $montserrat;
+                    text-transform: uppercase;
+                }
             }
         }
     }
