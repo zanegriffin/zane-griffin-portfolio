@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import './style/About.scss'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faLaptopCode, faPencilRuler, faMobileAlt} from '@fortawesome/free-solid-svg-icons'
-import {faHtml5, faCss3, faJsSquare, faNodeJs, faBootstrap, faReact, faFigma} from '@fortawesome/free-brands-svg-icons'
+import {faHtml5, faCss3, faJsSquare, faNodeJs, faBootstrap, faReact, faFigma, faSass} from '@fortawesome/free-brands-svg-icons'
 
 
 const About = (props) => {
@@ -77,6 +77,10 @@ const About = (props) => {
                 <div>
                     <FontAwesomeIcon icon={faFigma} />
                     <p>Figma</p>
+                </div>
+                <div>
+                    <FontAwesomeIcon icon={faSass} />
+                    <p>SASS</p>
                 </div>
             </div>
         </div>

@@ -18,10 +18,19 @@ $no-color: rgba(0,0,0,0);
 
 .about{
     margin-top: 40px;
+    @media (min-width: 1024px) {
+        margin-top: 80px;
+    }
     .features{
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            div{
+                width: 100%;
+            }
+        }
         div{
             // border-radius: 15px;
             width: 60vw;
@@ -62,11 +71,34 @@ $no-color: rgba(0,0,0,0);
                 font-family: $raleway;
                 font-size: 24px;
                 padding: 5px;
+                @media (min-width: 768px) {
+                    font-size: 30px;
+                }
             }
             p{
                 font-family: $montserrat;
                 margin: 0;
+                @media (min-width: 768px) {
+                font-size: 26px;
+                }
+                @media (min-width: 1440px) {
+                    font-size: 30px;
+                }
+                
             }
+            @media (min-width: 768px) {
+                padding: 50px 25px;
+            }
+            @media (min-width: 1024px) {
+                width: 100%;
+                margin: 20px;
+                height: 350px;
+                
+            }
+            @media (min-width: 1440px) {
+                padding: 50px 50px;
+            }
+            
         }
     }
     .line{
@@ -77,6 +109,7 @@ $no-color: rgba(0,0,0,0);
     }
     .me{
         // padding: 100px 0;
+        
         .image{
             height: 200px;
             width: 200px;
@@ -96,25 +129,40 @@ $no-color: rgba(0,0,0,0);
                         10px 0px rgba(255, 123, 0, 0.75),
                         -10px -10px rgba(112, 228, 239, 0.75),
                         -10px 0px  rgba(55, 115, 255, 0.75);
+            @media (min-width: 1024px) {
+                width: 300px;
+                height: 300px;
+                border-radius: 150px;
+            }
         }
         .words{
             margin-bottom: 50px;
             padding: 30px 0 30px 50px;
             background-image: linear-gradient(to right, $gold-yellow 50%, $no-color 50%);
             div{
-               margin: 20px;
+               margin: 20px auto;
                background-color: $blue-crayola;
                padding: 20px;
                box-shadow: 10px 10px blue;
                color: $electric-blue;
+               max-width: 1000px;
                 h1{
                     font-family: $raleway;
+                    @media (min-width: 1024px) {
+                        font-size: 36px;
+                    }
                 }
                 h3{
                     font-family: $raleway;
+                    @media (min-width: 1024px) {
+                        font-size: 30px;
+                    }
                 }
                 p{
                     font-family: $montserrat;
+                    @media (min-width: 1024px) {
+                        font-size: 24px;
+                    }
                 }
             }
         }
