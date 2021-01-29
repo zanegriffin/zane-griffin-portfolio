@@ -11,7 +11,7 @@ const Contact = (props) => {
    }
     return(
         <div className='contact entry'>
-            <h1>Meh</h1>
+            <h1>I'm still under development!</h1>
         </div>
     )
 }
