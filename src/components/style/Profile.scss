@@ -1,4 +1,7 @@
 $cosmic-latte: #fff4e4;
+.profile::-webkit-scrollbar {
+    display: none;
+}
 .profile{
     height: 100%;
     width: 100vw;

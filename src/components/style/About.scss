@@ -21,10 +21,13 @@ $no-color: rgba(0,0,0,0);
     @media (min-width: 1024px) {
         margin-top: 80px;
     }
+    
     .features{
         display: flex;
         flex-direction: column;
         align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
         @media (min-width: 1024px) {
             flex-direction: row;
             div{
@@ -82,7 +85,7 @@ $no-color: rgba(0,0,0,0);
                 font-size: 26px;
                 }
                 @media (min-width: 1440px) {
-                    font-size: 30px;
+                    font-size: 28px;
                 }
                 
             }
