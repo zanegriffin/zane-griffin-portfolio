@@ -109,9 +109,9 @@ const Header = (props) => {
                 <div className='links'>
                     <ul>
                         <li onClick={() => toHome()}>Home</li>
-                        <li onClick={() => toAbout()}>About</li>
-                        <li onClick={() => toPortfolio()}>Portfolio</li>
-                        <li onClick={() => toContact()}>Contact</li>
+                        <li onClick={() => toAbout()} style={props.currentPage === '.about' ? {backgroundColor: '#70e4efff'} : {}} >About</li>
+                        <li onClick={() => toPortfolio()} style={props.currentPage === '.portfolio' ? {backgroundColor: '#70e4efff'} : {}}>Portfolio</li>
+                        <li onClick={() => toContact()} style={props.currentPage === '.contact' ? {backgroundColor: '#70e4efff'} : {}}>Contact</li>
                     </ul>
                 </div>
                 <div className='mobile'>

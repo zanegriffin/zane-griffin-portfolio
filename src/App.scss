@@ -10,10 +10,16 @@ $cosmic-latte: #fff4e4;
 $mauve: #EDC9FF;
 $mint-green: #9bff99;
 
+::-webkit-scrollbar {
+    display: none;
+}
 
 .App{
     background-color: $cyclamen;
     overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+    height: 100%;
 }
 
 
@@ -32,6 +38,7 @@ $mint-green: #9bff99;
 html, body {
   // cursor: none;
   background-color: $cyclamen;
+  
 }
 .exit{
     animation: exit-down 1500ms ease;

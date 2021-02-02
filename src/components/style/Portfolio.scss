@@ -21,17 +21,31 @@ $no-color: rgba(0,0,0,0);
         background-image: linear-gradient( to right, $gold-yellow 50%, $no-color 50%);
         padding: 30px 10px;
         margin: 30px 0;
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient( to right, $gold-yellow 80%, $no-color 50%);
+            margin: 60px 0;
+        }
         img{
             display: block;
             width: 90%;
             margin: 0 auto;
             box-shadow: 10px 10px $shadow;
+            max-width: 700px;
+            @media (min-width: 768px) {
+                width: 50%;
+            }
         }
         div{
             width: 80%;
             margin: 0 auto;
             padding: 20px 10px;
-            
+            max-width: 600px;
+            @media (min-width: 768px) {
+                margin-left: 20px;
+            }
             h1{
                 text-align: center;
                 background-color: $blue-crayola;
@@ -39,15 +53,25 @@ $no-color: rgba(0,0,0,0);
                 color: $electric-blue;
                 padding: 5px;
                 font-size: 28px;
-                margin-right: 20px;
+                @media (min-width: 768px) {
+                    font-size: 30px;
+                }
+                @media (min-width: 1024px) {
+                    font-size: 36px;
+                }
             }
             p{
                 text-align: right;
-                margin-left: 20px;
                 background-color: $blue-crayola;
                 box-shadow: 5px 5px blue;
                 color: $electric-blue;
                 padding: 15px;
+                @media (min-width: 768px) {
+                    font-size: 20px;
+                }
+                @media (min-width: 1024px) {
+                    font-size: 28px;
+                }
             }
         }
     }

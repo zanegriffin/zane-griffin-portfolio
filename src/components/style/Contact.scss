@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@400;700&display=swap');
+$montserrat: 'Montserrat', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$blue-crayola: #3772ffff;
+$fuchsia: #f038ffff;
+$cyclamen: #ef709dff;
+$gold-yellow: rgb(214, 205, 81);
+$electric-blue: #70e4efff;
+$cosmic-latte: #fff4e4;
+$mauve: #EDC9FF;
+$mint-green: #9bff99;
+$green: #4ec54c;
+$dark-green: #015800;
+$shadow: rgba(41, 41, 41, 0.5);
+$eggplant: rgb(73, 3, 73);
+$turquiose: #00ffbf;
+.contact{
+    margin-top: 40px;
+    width: 90vw;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    h3{
+        font-family: $raleway;
+    }
+    p{
+        font-family: $montserrat;
+    }
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        label{
+            font-family: $raleway;
+            font-weight: bold;
+            background-color: $blue-crayola;
+            color: $electric-blue;
+            padding: 20px;
+            align-self: flex-start;
+            margin: 15px 0;
+            box-shadow: 5px 5px blue;
+        }
+        input{
+            font-family: $montserrat;
+            color: $eggplant;
+            background-color: $mauve;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            width: 200px;
+            box-shadow: 5px 5px $eggplant;
+            &::placeholder{
+                color: $eggplant;
+            }
+        }
+        
+        textarea{
+            font-family: $montserrat;
+            color: $eggplant;
+            box-shadow: 5px 5px $eggplant;
+            background-color: $mauve;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            width: 200px;
+            &::placeholder{
+                color: $eggplant;
+            }
+            
+        }
+
+        button{
+            margin: 15px;
+            border: none;
+            background-color: $green;
+            color: $mint-green;
+            box-shadow: 5px 5px $dark-green;
+            padding: 10px;
+        }
+    }
+}
