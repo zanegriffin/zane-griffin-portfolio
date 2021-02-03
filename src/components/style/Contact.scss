@@ -15,10 +15,10 @@ $shadow: rgba(41, 41, 41, 0.5);
 $eggplant: rgb(73, 3, 73);
 $turquiose: #00ffbf;
 .contact{
-    margin-top: 40px;
     width: 90vw;
     height: 100%;
     margin: 0 auto;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,16 +26,37 @@ $turquiose: #00ffbf;
     flex: 1;
     h3{
         font-family: $raleway;
+        color: $electric-blue;
+        background-color: $blue-crayola;
+        box-shadow: 5px 5px blue;
+        padding: 15px;
+        margin: 5px;
+        @media (min-width: 768px) {
+            font-size: 26px;  
+        }
     }
     p{
         font-family: $montserrat;
+        font-weight: bold;
+        padding: 15px;
+        color: rgb(255, 255, 211);
+        background-color: $gold-yellow;
+        box-shadow: 5px 5px rgb(133, 96, 2);
+        @media (min-width: 768px) {
+            font-size: 20px;  
+        }
     }
     form{
         width: 100%;
+        max-width: 1000px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 15px;
+        background-color: $electric-blue;
+        box-shadow: 5px 5px $shadow;
+        margin: 10px 10px;;
         label{
             font-family: $raleway;
             font-weight: bold;
@@ -45,6 +66,9 @@ $turquiose: #00ffbf;
             align-self: flex-start;
             margin: 15px 0;
             box-shadow: 5px 5px blue;
+            @media (min-width: 768px) {
+                font-size: 26px;
+            }
         }
         input{
             font-family: $montserrat;
@@ -58,6 +82,11 @@ $turquiose: #00ffbf;
             &::placeholder{
                 color: $eggplant;
             }
+            @media (min-width: 768px) {
+                font-size: 20px;
+                width: 50%;
+                padding: 15px;
+            }
         }
         
         textarea{
@@ -69,10 +98,15 @@ $turquiose: #00ffbf;
             padding: 10px;
             border-radius: 5px;
             width: 200px;
+            height: 100px;
             &::placeholder{
                 color: $eggplant;
             }
-            
+            @media (min-width: 768px) {
+                font-size: 20px;
+                width: 50%;
+                padding: 15px;
+            }
         }
 
         button{
@@ -82,6 +116,25 @@ $turquiose: #00ffbf;
             color: $mint-green;
             box-shadow: 5px 5px $dark-green;
             padding: 10px;
+            font-family: $raleway;
+            font-weight: bold;
+            font-size: 20px;
+            @media (min-width: 768px) {
+                font-size: 26px;  
+            }
         }
+    }
+
+    .social-media{
+        svg{
+            font-size: 44px;
+            color: $electric-blue;
+            margin: 3px;
+            background-color: blue;
+            padding: 10px;
+            border-radius: 50px;
+        }
+        padding: 5px;
+        margin: 20px auto;
     }
 }

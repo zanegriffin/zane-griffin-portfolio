@@ -31,12 +31,22 @@ const Contact = (props) => {
    }
 
    const sendEmail = (info) => {
-    axios({
-        method: 'post',
-        url: 'https://email-zanegriffin.herokuapp.com/sendtome',
-        headers: {'Content-Type': 'application/json'},
-        data: JSON.stringify(info)
-    })
+       
+    if(info.name === undefined || info.email === undefined || info.subject === undefined || info.text === undefined){
+        alert('Form not complete')
+    } else {
+        axios({
+            method: 'post',
+            url: 'https://email-zanegriffin.herokuapp.com/sendtome',
+            headers: {'Content-Type': 'application/json'},
+            data: JSON.stringify(info)
+        })
+        let inputs = document.querySelectorAll('.contact-input')
+        inputs.forEach(input => {
+            input.value = ''
+        })
+        alert('Thank you! I will get back to you soon!')
+    }
    }
 
     return(
@@ -50,6 +60,7 @@ const Contact = (props) => {
                     name="name"
                     placeholder="Name"
                     onChange={handleChange}
+                    className='contact-input'
                 ></input>
                 <label>How can I reach you?</label>
                 <input
@@ -57,6 +68,7 @@ const Contact = (props) => {
                     name="email"
                     placeholder="Email"
                     onChange={handleChange}
+                    className='contact-input'
                 ></input>
                 <label>What type of work?</label>
                 <input
@@ -64,18 +76,20 @@ const Contact = (props) => {
                     name="subject"
                     placeholder="Subject"
                     onChange={handleChange}
+                    className='contact-input'
                 ></input>
                 <label>All the gritty details.</label>
                 <textarea
                     type="text"
-                    name="Text"
+                    name="text"
                     placeholder="Details"
                     onChange={handleChange}
+                    className='contact-input'
                 ></textarea>
                 <button onClick={handleSubmit}>Send</button>
             </form>
             <div className='social-media'>
-                <FontAwesomeIcon icon={faTwitter} />
+                <a src='twitter.com'><FontAwesomeIcon icon={faTwitter} /></a>
                 <FontAwesomeIcon icon={faLinkedin} />
                 <FontAwesomeIcon icon={faGithub} />
                 <FontAwesomeIcon icon={faCodepen} />
