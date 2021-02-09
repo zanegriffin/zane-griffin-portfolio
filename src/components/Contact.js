@@ -89,10 +89,10 @@ const Contact = (props) => {
                 <button onClick={handleSubmit}>Send</button>
             </form>
             <div className='social-media'>
-                <a src='twitter.com'><FontAwesomeIcon icon={faTwitter} /></a>
-                <FontAwesomeIcon icon={faLinkedin} />
-                <FontAwesomeIcon icon={faGithub} />
-                <FontAwesomeIcon icon={faCodepen} />
+                <a href='https://twitter.com/ZaneBGriffin' target='_blank'><FontAwesomeIcon icon={faTwitter} /></a>
+                <a href='https://www.linkedin.com/in/zane-griffin/' target='_blank'><FontAwesomeIcon icon={faLinkedin} /></a>
+                <a href='https://github.com/zanegriffin' target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
+                <a href='https://codepen.io/zanegriffin' target='_blank'><FontAwesomeIcon icon={faCodepen} /></a>
             </div>
         </div>
     )
