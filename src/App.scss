@@ -20,20 +20,21 @@ $mint-green: #9bff99;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none; 
     height: 100%;
+    position: relative;
 }
 
 
-.cursor {
-    width: 40px;
-    height: 40px;
-    border: 2px solid #fefefe;
-    border-radius: 100%;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: difference;
-}
+// .cursor {
+//     width: 40px;
+//     height: 40px;
+//     border: 2px solid #fefefe;
+//     border-radius: 100%;
+//     position: fixed;
+//     transform: translate(-50%, -50%);
+//     pointer-events: none;
+//     z-index: 9999;
+//     mix-blend-mode: difference;
+// }
 
 html, body {
   // cursor: none;

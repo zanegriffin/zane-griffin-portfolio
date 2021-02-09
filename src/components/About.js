@@ -43,9 +43,9 @@ const About = (props) => {
                 <div className='words'>
                     <div>
                     <h1>Hello!</h1>
-                    <h3>I am a baker turned coder with a drive to make awesome responsive websties</h3>
+                    <h3>I am a baker turned coder with a drive to make awesome responsive websites.</h3>
                     <p>I learned my basic knowledge through General Assembly's Software Engineering Immersive Bootcamp. After graduating at the end of November 2020, I have been continuing my education through various internet resources.</p>
-                    <p>I started out as a baker and moved into cake decorating for my everyday job while I was in college. When I discovered some coding resources online, I realized I was in the wrong field. <span>Frontend</span>, <span>backend</span>, <span>fullstack</span>, and <span>UI design</span> have all been a blast for me since following this dream. I want others to know that they too have what it takes to jump in.</p>
+                    <p>I started out as a baker and moved into cake decorating for my everyday job while I was in college. When I discovered some coding resources online, I realized I was in the wrong field. <span>Frontend</span>, <span>backend</span>, <span>fullstack</span>, and <span>UI design</span> have all been a blast for me since following this dream. I want others to know that they can make a change in their lives and jump into coding.</p>
                     </div>
                 </div>
             </div>

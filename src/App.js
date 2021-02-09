@@ -4,6 +4,7 @@ import {Switch, Route} from 'react-router-dom'
 
 import Landing from './components/Landing'
 import Profile from './components/Profile'
+import Cursor from './components/Cursor'
 
 function App() {
 
@@ -11,10 +12,11 @@ function App() {
 
   return (
     <div className="App" onbeforeunload="HandleBackFunctionality()">
-          <Switch>
-            <Route exact path='/' render={(rp) => <Landing {...rp} setCurrentPage={setCurrentPage}/>} />
-            <Route path='/profile' render={(rp) => <Profile {...rp} currentPage={currentPage} setCurrentPage={setCurrentPage} />} />
-          </Switch>
+      <Cursor></Cursor>
+      <Switch>
+        <Route exact path='/' render={(rp) => <Landing {...rp} setCurrentPage={setCurrentPage}/>} />
+        <Route path='/profile' render={(rp) => <Profile {...rp} currentPage={currentPage} setCurrentPage={setCurrentPage} />} />
+      </Switch>
     </div>
   );
 }

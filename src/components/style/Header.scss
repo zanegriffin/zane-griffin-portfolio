@@ -13,16 +13,17 @@ $shadow: rgba(41, 41, 41, 0.5);
 $eggplant: rgb(73, 3, 73);
 $turquiose: #00ffbf;
 .header{
-    
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     color: $electric-blue;
     height: 120px;
+    position: relative;
+    z-index: 1;
     .fixed-top{
         width: 100%;
         position: fixed;
-        background-image: linear-gradient($cyclamen, rgba(239, 112, 156, 0));
+        background-image: linear-gradient($cyclamen 60%, transparent);
         h1{
             margin-top: 20px;
             margin-left: 30%;

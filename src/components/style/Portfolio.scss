@@ -73,6 +73,15 @@ $no-color: rgba(0,0,0,0);
                     font-size: 28px;
                 }
             }
+            a{
+                background-color: $mauve;
+                color: $eggplant;
+                padding: 10px;
+                box-shadow: 5px 5px $eggplant;
+                text-decoration: none;
+                font-family: $raleway;
+                font-weight: bold;
+            }
         }
     }
 }
