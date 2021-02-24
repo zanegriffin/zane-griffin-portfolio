@@ -38,8 +38,8 @@ const Portfolio = (props) => {
             <div className='project'>
                 <img src={'https://res.cloudinary.com/feedmejoy/image/upload/v1614181964/Screenshot_2021-02-24_095151_eowix6.png'} />
                 <div>
-                    <h1>Dunwich Manor</h1>
-                    <p>Are video games today too advanced for you? Take a step back with this old school point and click adventure game built with a MERN stack. A group project from school days.</p>
+                    <h1>Artist Portfolio</h1>
+                    <p>A simple and clean artist portfolio. The artist's works are structured with flex box and filled with a Contentful backend.</p>
                     <a target="_blank" href='https://mock-portfolio.netlify.app/'>See it live here</a>
                 </div>
             </div>
