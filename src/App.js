@@ -1,5 +1,5 @@
 import './App.scss';
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Switch, Route} from 'react-router-dom'
 
 import Landing from './components/Landing'
@@ -9,6 +9,17 @@ import Cursor from './components/Cursor'
 function App() {
 
  const [currentPage, setCurrentPage] = useState('.landing') 
+
+ const wakeUpHeroku = () => {
+   fetch('https://email-zanegriffin.herokuapp.com')
+   .then(response => {
+     console.log(response)
+   })
+ }
+
+ useEffect(() => {
+   wakeUpHeroku()
+ }, [])
 
   return (
     <div className="App" onbeforeunload="HandleBackFunctionality()">
