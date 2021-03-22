@@ -5,6 +5,7 @@ import {faGithub, faTwitter, faLinkedin, faCodepen} from '@fortawesome/free-bran
 import './style/Contact.scss'
 
 const Contact = (props) => {
+    
     useEffect(() => {
         settingState()
    }, [])
@@ -53,7 +54,7 @@ const Contact = (props) => {
         <div className='contact entry'>
             <h3>Let's connect and chat!</h3>
             <p>Fill out the form and see what I've been up to on social media!</p>
-            <form>
+            <form action='https://mailthis.to/Zane Griffin' method='POST' encType='multipart/form-data'>
                 <label>Who are you?</label>
                 <input
                     type="text"
@@ -63,30 +64,26 @@ const Contact = (props) => {
                     className='contact-input'
                 ></input>
                 <label>How can I reach you?</label>
-                <input
-                    type="text"
-                    name="email"
-                    placeholder="Email"
-                    onChange={handleChange}
-                    className='contact-input'
-                ></input>
+                <input type="email" name="_replyto" placeholder="Your email" className='contact-input'></input>
                 <label>What type of work?</label>
                 <input
                     type="text"
                     name="subject"
                     placeholder="Subject"
-                    onChange={handleChange}
                     className='contact-input'
                 ></input>
                 <label>All the gritty details.</label>
                 <textarea
                     type="text"
-                    name="text"
+                    name="message"
                     placeholder="Details"
                     onChange={handleChange}
                     className='contact-input'
                 ></textarea>
-                <button onClick={handleSubmit}>Send</button>
+                <input type="hidden" name="_subject" value="Contact form submitted! Thank You!"></input>
+                <input type="hidden" name="_honeypot" value=""></input>
+                <input type="hidden" name="_confirmation" value=""></input>
+                <input type='submit' value='Send'></input>
             </form>
             <div className='social-media'>
                 <a href='https://twitter.com/ZaneBGriffin' target='_blank'><FontAwesomeIcon icon={faTwitter} /></a>
